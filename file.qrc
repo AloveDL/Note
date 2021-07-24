@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/">
+        <file>app_icon.png</file>
+        <file>icon/C.png</file>
+        <file>icon/newfile.png</file>
+        <file>icon/open.png</file>
+        <file>icon/save.png</file>
+        <file>icon/saveAs.png</file>
+        <file>icon/V.png</file>
+        <file>icon/X.png</file>
+        <file>icon/exit.png</file>
+        <file>icon/max_window.png</file>
+        <file>icon/min_window.png</file>
+        <file>icon/about.png</file>
+        <file>icon/setting.png</file>
+        <file>icon/excel.png</file>
+        <file>icon/PDF.png</file>
+        <file>icon/PPT.png</file>
+        <file>icon/txt.png</file>
+        <file>icon/word.png</file>
+        <file>icon/fontsize.png</file>
+        <file>icon/fontcolor.png</file>
+    </qresource>
+</RCC>
