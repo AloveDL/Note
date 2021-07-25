@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>915</width>
-    <height>926</height>
+    <width>880</width>
+    <height>890</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>915</width>
-    <height>926</height>
+    <width>880</width>
+    <height>890</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>915</width>
-    <height>926</height>
+    <width>880</width>
+    <height>890</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -29,30 +29,17 @@
    <iconset resource="file.qrc">
     <normaloff>:/app_icon.png</normaloff>:/app_icon.png</iconset>
   </property>
-  <property name="styleSheet">
-   <string notr="true">background-color:rgb(226, 226, 226);</string>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
   </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1111</width>
-     <height>321</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color:rgb(85, 170, 255);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(236, 236, 236);</string>
+  </property>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>20</y>
+     <x>300</x>
+     <y>40</y>
      <width>282</width>
      <height>282</height>
     </rect>
@@ -66,12 +53,12 @@
    <property name="styleSheet">
     <string notr="true">
 background-color:rgb(255, 255, 255);
-min-width:     280px;    
-min-height:    280px;    
-max-width:     280px;   
-max-height:    280px;    
-border-radius: 140px;     
-border:1px solid black; 
+min-width:     280px;
+min-height:    280px;
+max-width:     280px;
+max-height:    280px;
+border-radius: 140px;
+border:1px solid black;
 
 </string>
    </property>
@@ -80,6 +67,12 @@ border:1px solid black;
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="file.qrc">:/icon/headimage.png</pixmap>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -91,8 +84,17 @@ border:1px solid black;
      <height>71</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>14</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;Arial&quot;;</string>
+    <string notr="true">font: 14pt &quot;Arial&quot;;</string>
    </property>
    <property name="text">
     <string>账号</string>
@@ -108,7 +110,7 @@ border:1px solid black;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;Arial&quot;;</string>
+    <string notr="true">font: 14pt &quot;Arial&quot;;</string>
    </property>
    <property name="text">
     <string>密码</string>
@@ -117,32 +119,52 @@ border:1px solid black;
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>720</y>
+     <x>340</x>
+     <y>760</y>
      <width>191</width>
      <height>71</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(85, 170, 255);
-font: 12pt &quot;Arial&quot;;</string>
+    <string notr="true">background-color:transparent;
+color:#76becc;
+font: 18pt &quot;Arial&quot;;
+text-decoration:underline;</string>
    </property>
    <property name="text">
-    <string>游客登录</string>
+    <string>离线模式</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>550</x>
-     <y>720</y>
-     <width>191</width>
-     <height>71</height>
+     <x>150</x>
+     <y>630</y>
+     <width>251</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;Arial&quot;;
-background-color:rgb(85, 170, 255);</string>
+    <string notr="true">QPushButton{
+background-color: #008792;
+border:2px #afdfe4;
+border-radius:30px;
+padding:2px ;
+border-style: outset;
+color:rgb(240,240,240);
+font: 12pt &quot;Arial&quot;;}
+QPushButton:pressed{
+background-color:#145b7d;
+border:2px #afdfe4;
+border-style:inset;
+color:rgb(240,240,240);}
+QPushButton:hover{
+background-color:rgb(56,150,160);
+color:rgba(0,0,0,200);
+}
+
+
+</string>
    </property>
    <property name="text">
     <string>登录</string>
@@ -153,13 +175,24 @@ background-color:rgb(85, 170, 255);</string>
     <rect>
      <x>260</x>
      <y>410</y>
-     <width>441</width>
+     <width>401</width>
      <height>71</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>14</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;Arial&quot;;
-background-color:rgb(255, 255, 255);</string>
+    <string notr="true">font: 14pt &quot;Arial&quot;;
+background-color:transparent;
+border-width:0;
+border-style:outset;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_2">
@@ -167,16 +200,53 @@ background-color:rgb(255, 255, 255);</string>
     <rect>
      <x>260</x>
      <y>520</y>
-     <width>441</width>
+     <width>401</width>
      <height>71</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;Arial&quot;;
-background-color:rgb(255, 255, 255);</string>
+    <string notr="true">font: 14pt &quot;Arial&quot;;
+background-color:transparent;
+border-width:0;
+border-style:outset;</string>
    </property>
    <property name="echoMode">
     <enum>QLineEdit::Password</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>630</y>
+     <width>251</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: #008792;
+border:2px #afdfe4;
+border-radius:30px;
+padding:2px ;
+border-style: outset;
+color:rgb(240,240,240);
+font: 12pt &quot;Arial&quot;;}
+QPushButton:pressed{
+background-color:#145b7d;
+border:2px #afdfe4;
+border-style:inset;
+color:rgb(240,240,240);}
+QPushButton:hover{
+background-color:rgb(56,150,160);
+color:rgba(0,0,0,200);
+}
+
+
+</string>
+   </property>
+   <property name="text">
+    <string>注册</string>
    </property>
   </widget>
  </widget>

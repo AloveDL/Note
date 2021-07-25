@@ -18,27 +18,74 @@
     <normaloff>:/app_icon.png</normaloff>:/app_icon.png</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(37, 37, 38);</string>
+   <string notr="true">background-color: rgb(37, 37, 38);
+color: rgb(255, 255, 255);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
-     <widget class="QSplitter" name="splitter_2">
+     <widget class="QSplitter" name="splitter_4">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
-      <widget class="QTreeView" name="treeView">
-       <property name="maximumSize">
-        <size>
-         <width>400</width>
-         <height>16777215</height>
-        </size>
+      <widget class="QSplitter" name="splitter_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
        </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(64, 65, 66);</string>
-       </property>
+       <widget class="QSplitter" name="splitter">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <widget class="QLineEdit" name="searchT">
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;Arial&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(64, 65, 66);</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="searchB">
+         <property name="maximumSize">
+          <size>
+           <width>90</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(64, 65, 66);
+image: url(:/icon/search.png);
+color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QTreeView" name="treeView">
+        <property name="maximumSize">
+         <size>
+          <width>400</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(64, 65, 66);
+font: 12pt &quot;Arial&quot;;</string>
+        </property>
+       </widget>
       </widget>
-      <widget class="QSplitter" name="splitter">
+      <widget class="QSplitter" name="splitter_3">
        <property name="orientation">
         <enum>Qt::Vertical</enum>
        </property>
@@ -48,6 +95,15 @@
           <width>16777215</width>
           <height>70</height>
          </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
         </property>
         <property name="styleSheet">
          <string notr="true">font: 12pt &quot;Arial&quot;;
@@ -81,6 +137,7 @@ QMenu::item:selected{background-color:#ff0000};</string>
      <string>文件(&amp;F)</string>
     </property>
     <addaction name="action_create"/>
+    <addaction name="action_newDir"/>
     <addaction name="action_open"/>
     <addaction name="action_save"/>
     <addaction name="action_saveAs"/>
@@ -93,6 +150,7 @@ QMenu::item:selected{background-color:#ff0000};</string>
     <addaction name="action_C"/>
     <addaction name="action_V"/>
     <addaction name="action_X"/>
+    <addaction name="action_2"/>
    </widget>
    <widget class="QMenu" name="window">
     <property name="title">
@@ -128,7 +186,7 @@ QMenu::item:selected{background-color:#ff0000};</string>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(37, 37, 38);
-color: rgb(255, 255, 255);</string>
+</string>
    </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
@@ -137,6 +195,7 @@ color: rgb(255, 255, 255);</string>
     <bool>false</bool>
    </attribute>
    <addaction name="action_create"/>
+   <addaction name="action_newDir"/>
    <addaction name="action_open"/>
    <addaction name="action_save"/>
    <addaction name="action_saveAs"/>
@@ -146,6 +205,7 @@ color: rgb(255, 255, 255);</string>
    <addaction name="action_X"/>
    <addaction name="action_3"/>
    <addaction name="action_4"/>
+   <addaction name="action_2"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="action_create">
@@ -154,6 +214,9 @@ color: rgb(255, 255, 255);</string>
      <normaloff>:/icon/newfile.png</normaloff>:/icon/newfile.png</iconset>
    </property>
    <property name="text">
+    <string>新建文件(&amp;N)</string>
+   </property>
+   <property name="toolTip">
     <string>新建文件(&amp;N)</string>
    </property>
    <property name="iconVisibleInMenu">
@@ -281,6 +344,27 @@ color: rgb(255, 255, 255);</string>
   <action name="action_5">
    <property name="text">
     <string>保存路径</string>
+   </property>
+  </action>
+  <action name="action_newDir">
+   <property name="icon">
+    <iconset resource="file.qrc">
+     <normaloff>:/icon/newDir.png</normaloff>:/icon/newDir.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建目录(&amp;D)</string>
+   </property>
+   <property name="toolTip">
+    <string>新建目录(&amp;D)</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="icon">
+    <iconset resource="file.qrc">
+     <normaloff>:/icon/reflash.png</normaloff>:/icon/reflash.png</iconset>
+   </property>
+   <property name="text">
+    <string>刷新</string>
    </property>
   </action>
  </widget>

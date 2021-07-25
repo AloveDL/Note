@@ -21,6 +21,8 @@ SOURCES += \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
+    path.cpp \
+    register.cpp \
     subwindow.cpp \
     textedit.cpp
 
@@ -28,13 +30,17 @@ HEADERS += \
     fontsize.h \
     login.h \
     mainwindow.h \
+    path.h \
+    register.h \
     subwindow.h \
     textedit.h
 
 FORMS += \
     fontsize.ui \
     login.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    path.ui \
+    register.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

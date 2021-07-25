@@ -20,5 +20,9 @@
         <file>icon/word.png</file>
         <file>icon/fontsize.png</file>
         <file>icon/fontcolor.png</file>
+        <file>icon/search.png</file>
+        <file>icon/newDir.png</file>
+        <file>icon/headimage.png</file>
+        <file>icon/reflash.png</file>
     </qresource>
 </RCC>
